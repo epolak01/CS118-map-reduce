@@ -17,8 +17,8 @@ for line in sys.stdin:
             if not re.search(r'^[[:upper:]]', pagename_decoded):
                 if not re.search(r'(.jpg|.gif|.png|.ico|.txt)$', pagename_decoded, re.I):  ## re.I = case-insensitive
                     if not re.search(r'(404_error|Main_Page|Hypertext_Transfer_Protocol|Favicon.ico|Search)', pagename_decoded):
-                        print('[' + pagename_decoded + ']', '\t', pageviews)
-                        print(projectcode + "," + pagename_decoded + "," + pageviews + "," + bytes);
+                        print(pagename_decoded + '\\' + date, '\t', pageviews)
+                        #print(projectcode + "," + pagename_decoded + "," + pageviews + "," + bytes);
     
 
 
