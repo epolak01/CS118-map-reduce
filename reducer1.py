@@ -10,7 +10,7 @@ for line in sys.stdin:
         pageviews = int(pageviews)
     except:
         continue
-
-view_count[pagename_date] += pageviews
+    view_count[pagename_date] += pageviews
+    
 for pagename_date, pageviews in view_count.items():
     print(pagename_date, pageviews)
