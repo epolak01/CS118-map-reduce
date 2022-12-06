@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from collections import defaultdict
 import sys
 
 pagename = None
@@ -23,7 +22,6 @@ for line in sys.stdin:
     # print old result, and start accumulating new result
     if (pagename != curr_pagename):
         if (curr_pagename != None): # print old result            
-            # dates, pageviews_per_date = zip(*dates_pageviews)
             print(curr_pagename, '\t', dates, '\t', pageviews_per_date, '\t', count, '\t',  pop_trend)
         
         
