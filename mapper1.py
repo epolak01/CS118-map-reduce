@@ -18,18 +18,6 @@ for line in sys.stdin:
                 if not re.search(r'(.jpg|.gif|.png|.ico|.txt)$', pagename_decoded, re.I):  ## re.I = case-insensitive
                     if not re.search(r'(404_error|Main_Page|Hypertext_Transfer_Protocol|Favicon.ico|Search)', pagename_decoded):
                         print(pagename_decoded + '}' + date, '\t', pageviews)
-                        #print(projectcode + "," + pagename_decoded + "," + pageviews + "," + bytes);
-    
-
-
-# import gzip, re, os, sys, urllib
-
-# with gzip.open(filename, ‘rt’) as fi:  # rt = read text mode
-#     for line in fi:
-#         pagename_decoded = urllib.unquote_plus(pagename)  ## for lines that have this part only
-#         # fields = line.split()
-#         projectcode, pagename, pageviews, bytes = line.split()
-
 
 
 
