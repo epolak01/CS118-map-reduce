@@ -3,6 +3,12 @@
 from collections import defaultdict
 import sys
 view_count = defaultdict(int)
+
+pagename_date = None
+curr_pagename_date = None
+count = 0
+
+
 for line in sys.stdin:
     try:
         line = line.strip()
@@ -10,7 +16,14 @@ for line in sys.stdin:
         pageviews = int(pageviews)
     except:
         continue
-    view_count[pagename_date] += pageviews
     
-for pagename_date, pageviews in view_count.items():
-    print(pagename_date, pageviews)
+    # print old result, and start accumulating new result
+    if (pagename_date != curr_pagename_date):
+        if (curr_pagename_date != None): # print old result
+            print(curr_pagename_date, count)
+        curr_pagename_date = pagename_date
+        count = pageviews
+    else:
+        count += pageviews
+if (pagename_date == curr_pagename_date): # print last count
+    print(curr_pagename_date, count)
