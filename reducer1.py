@@ -2,12 +2,10 @@
 
 from collections import defaultdict
 import sys
-view_count = defaultdict(int)
 
 pagename_date = None
 curr_pagename_date = None
 count = 0
-
 
 for line in sys.stdin:
     try:
