@@ -9,7 +9,7 @@ for line in sys.stdin:
     except:
         continue
     
-    date = "0-0-0000" # temporary, get date from filename 
+    date = "00000000" # temporary, get date from filename 
     pagename_decoded = urllib.parse.unquote_plus(pagename)  ## for lines that have this part only
     
     if re.search(r'^en', projectcode): # TODO: is it just beginning with en or just en??????
