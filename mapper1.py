@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import gzip, re, os, sys, urllib.parse
+import re, sys, urllib.parse
 
 for line in sys.stdin:
     try:

@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-
-from collections import defaultdict
 import sys
 
 pagename_date = None
