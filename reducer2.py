@@ -35,7 +35,8 @@ for line in sys.stdin:
         pageviews_per_date.append(pageviews)
         count = pageviews
         
-        if (date % 10 > 2):
+        # if (int(date[-2:]) > 2):
+        if (date % 100 > 2):
             pop_trend = pageviews
         else:
             pop_trend = -pageviews
@@ -43,7 +44,8 @@ for line in sys.stdin:
         count += pageviews
         dates.append(date)
         pageviews_per_date.append(pageviews)
-        if (date % 10 > 2):
+        # if (int(date[-2:]) > 2): #
+        if (date % 100 > 2):
             pop_trend += pageviews
         else:
             pop_trend -= pageviews
