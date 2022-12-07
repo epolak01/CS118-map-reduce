@@ -9,8 +9,8 @@ for line in sys.stdin:
     except:
         continue
     
-    filename = os.getenv('mapreduce_map_input_file')
-    name, date, hours = filename.split('-')
+    # filename = os.getenv('mapreduce_map_input_file')
+    # name, date, hours = filename.split('-')
     date = "20160601" # temporary, get date from filename 
     pagename_decoded = urllib.parse.unquote_plus(pagename)  ## for lines that have this part only
     
@@ -19,7 +19,7 @@ for line in sys.stdin:
             if not re.search(r'^[\[:upper:\]]', pagename_decoded):
                 if not re.search(r'(.jpg|.gif|.png|.ico|.txt)$', pagename_decoded, re.I):  ## re.I = case-insensitive
                     if not re.search(r'(404_error|Main_Page|Hypertext_Transfer_Protocol|Favicon.ico|Search)', pagename_decoded):
-                        print(f"{pagename_decoded}'}'{date}\t{pageviews}")
+                        print(f"{pagename_decoded}'}}'{date}\t{pageviews}")
 
 
 
