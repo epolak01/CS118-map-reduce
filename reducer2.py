@@ -22,7 +22,7 @@ for line in sys.stdin:
     # print old result, and start accumulating new result
     if (pagename != curr_pagename):
         if (curr_pagename != None): # print old result            
-            print(curr_pagename, '\t', dates, '\t', pageviews_per_date, '\t', count, '\t',  pop_trend)
+            print(f"{curr_pagename}\t{dates}\t{pageviews_per_date}\t{count}\t{pop_trend}")
         
         
         # reset variables from previous key
@@ -50,5 +50,5 @@ for line in sys.stdin:
         else:
             pop_trend -= pageviews
 if (pagename == curr_pagename): # print last count
-    print(curr_pagename, '\t', dates, '\t', pageviews_per_date, '\t', count, pop_trend)
+    print(f"{curr_pagename}\t{dates}\t{pageviews_per_date}\t{count}\t{pop_trend}")
     

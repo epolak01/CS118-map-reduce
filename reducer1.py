@@ -16,10 +16,10 @@ for line in sys.stdin:
     # print old result, and start accumulating new result
     if (pagename_date != curr_pagename_date):
         if (curr_pagename_date != None): # print old result
-            print(curr_pagename_date, count)
+            print(f"{curr_pagename_date}\t{count}")
         curr_pagename_date = pagename_date
         count = pageviews
     else:
         count += pageviews
 if (pagename_date == curr_pagename_date): # print last count
-    print(curr_pagename_date, count)
+    print(f"{curr_pagename_date}\t{count}")

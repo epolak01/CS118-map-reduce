@@ -10,4 +10,4 @@ for line in sys.stdin:
     except:
         continue
     
-    print(pagename, '\t', date + '}' + pageviews)
+    print(f"{pagename}\t{date}}}{pageviews}")
