@@ -15,7 +15,7 @@ def main(argv):
         
         pagename_decoded = urllib.parse.unquote_plus(pagename)  ## for lines that have this part only
         
-        if re.search(r'^\"*en', projectcode): # TODO: is it just beginning with en or just en??????
+        if re.search(r'^en$', projectcode): # TODO: is it just beginning with en or just en??????
             if not re.search(r'^(Media|Special|Talk|User|User_talk|Project|Project_talk|File|File_talk|MediaWiki_talk|Template|Template_talk|Help|Help_talk|Category|Category_talk|Portal|Wikipedia|Wikipedia_talk)', pagename_decoded):  ## ^ = begins with
                 if not re.search(r'^\"*[\[:upper:\]]', pagename_decoded):
                     if not re.search(r'(.jpg|.gif|.png|.ico|.txt)\"*$', pagename_decoded, re.I):  ## re.I = case-insensitive
