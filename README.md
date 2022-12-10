@@ -35,6 +35,10 @@ Instance type:       m4.large
 Number of instances: 3  
 
 
+### Sample run on first 2 hours of data
+`pagecounts-20160601-000000.gz`  
+`pagecounts-20160601-010000.gz`  
+
 ### CLI Args
 `hadoop-streaming -files s3://mappers-bucket/mapper1.py,s3://reducers-bucket/reducer1.py -mapper mapper1.py -reducer reducer1.py -input s3://input-logs-files/ -output s3://output-logs-files/m1-r1-2hrs/`
 
