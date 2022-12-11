@@ -15,7 +15,10 @@ LOCATION "${INPUT}";
 INSERT OVERWRITE DIRECTORY "${OUTPUT}"
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\t'
-  SELECT pagename, total_views 
-  FROM results
-  ORDER BY total_views DESC, pagename
-  LIMIT 100;
+SELECT pagename, dates, date_views, total_views, pop_trend 
+FROM results
+WHERE pagename LIKE '%fox%'
+ORDER BY pagename;
+
+
+

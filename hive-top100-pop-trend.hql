@@ -1,7 +1,7 @@
 CREATE EXTERNAL TABLE IF NOT EXISTS results (
     pagename string,
-    dates array<date>,
-    date_views array<int>,
+    dates string,
+    date_views string,
     total_views int,
     pop_trend int
 )

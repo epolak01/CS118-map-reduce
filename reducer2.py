@@ -22,7 +22,7 @@ def main(argv):
         # print old result, and start accumulating new result
         if (pagename != curr_pagename):
             if (curr_pagename != None): # print old result            
-                print(f"{curr_pagename}\t{dates}\t{pageviews_per_date}\t{count}\t{pop_trend}")
+                print(f"{curr_pagename}\t[{','.join(map(str, dates))}]\t[{','.join(map(str, pageviews_per_date))}]\t{count}\t{pop_trend}")
             
             # reset variables from previous key
             dates.clear()
@@ -47,7 +47,7 @@ def main(argv):
             else:
                 pop_trend -= pageviews
     if (pagename == curr_pagename): # print last count
-        print(f"{curr_pagename}\t{dates}\t{pageviews_per_date}\t{count}\t{pop_trend}")
+        print(f"{curr_pagename}\t[{','.join(map(str, dates))}]\t[{','.join(map(str, pageviews_per_date))}]\t{count}\t{pop_trend}")
     
 if __name__ == "__main__":
     main(sys.argv)
