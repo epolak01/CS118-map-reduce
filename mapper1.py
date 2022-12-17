@@ -10,10 +10,8 @@ def main(argv):
         except:
             continue
         
-        #filename = os.path.split(os.getenv('map_input_file'))[1] # get filename
-        #name, date, hour = filename.split('-')
-        
-        date = "20160301"
+        filename = os.path.split(os.getenv('map_input_file'))[1] # get filename
+        name, date, hour = filename.split('-')
         
         pagename_decoded = urllib.parse.unquote_plus(pagename)  ## for lines that have this part only
         

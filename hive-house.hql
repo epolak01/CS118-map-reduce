@@ -18,4 +18,4 @@ FIELDS TERMINATED BY '\t'
 SELECT pagename, dates, date_views, total_views, pop_trend 
 FROM results
 WHERE pagename LIKE '%house%'
-ORDER BY total_views, pagename;
+ORDER BY total_views DESC, pagename;
